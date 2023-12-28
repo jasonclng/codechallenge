@@ -251,7 +251,7 @@ bool SubmissionHandler::read_submission_response(uint8_t* buf, int size) {
                 return true;
             }
         } else if (msg_type == 'G' && msg_len == 45) {
-            fprintf(stderr, "Login failed with reason: %s\n", &buf[offset+13]);
+            fprintf(stderr, "Submission failed with reason: %s\n", &buf[offset+13]);
         }
 
         offset += msg_len;
